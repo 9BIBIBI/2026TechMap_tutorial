@@ -1,0 +1,27 @@
+@Tutorials(name: "Reality Composer Pro 3로 눈 내리는 겨울 마을 만들기") {
+    @Intro(title: "눈 내리는 작은 겨울 마을을 완성해 보세요") {
+        Reality Composer Pro 3에서 USD 또는 USDZ 에셋을 배치하고, 조명과 애니메이션, 눈 파티클을 더해 겨울 디오라마를 만듭니다.
+
+        이 튜토리얼은 별도의 Swift 코드 없이 Reality Composer Pro의 편집 기능만 사용합니다. 전체 과정은 약 15~20분이 걸립니다.
+
+        준비물은 Reality Composer Pro 3가 설치된 Apple silicon Mac과 Floor, Igloo, Tree, Rock, Log, Signpost, 애니메이션이 포함된 Snowman 에셋입니다.
+
+        @Image(source: "tutorial-cover.png", alt: "눈이 내리는 완성된 겨울 마을의 튜토리얼 표지 placeholder")
+    }
+
+    @Chapter(name: "프로젝트 구성 및 겨울 마을 만들기") {
+        새 프로젝트에 3D 에셋을 가져오고, Transform과 Gizmo를 사용해 겨울 마을의 기본 장면을 구성합니다.
+
+        @Image(source: "chapter1-cover.png", alt: "눈 효과를 넣기 전 겨울 마을 배치 화면 placeholder")
+
+        @TutorialReference(tutorial: "doc:01-BuildWinterVillage")
+    }
+
+    @Chapter(name: "겨울 분위기 연출하기") {
+        Directional Light, 애니메이션 Sequence, Particle Emitter를 설정해 장면에 빛과 움직임, 눈 효과를 더합니다.
+
+        @Image(source: "chapter2-cover.png", alt: "라이팅과 눈 파티클이 적용된 겨울 마을 placeholder")
+
+        @TutorialReference(tutorial: "doc:02-CreateWinterAtmosphere")
+    }
+}
