@@ -1,0 +1,121 @@
+@Tutorial(time: 10) {
+    @Intro(title: "프로젝트 구성 및 겨울 마을 만들기") {
+        Reality Composer Pro 3 프로젝트를 만들고 제공된 3D 에셋을 가져온 다음, Transform과 Gizmo를 사용해 겨울 마을의 기본 배치를 완성합니다.
+
+        @Image(source: "chapter1-cover.png", alt: "눈 효과를 넣기 전 겨울 마을 배치 화면 placeholder")
+    }
+
+    @Section(title: "프로젝트 만들기") {
+        @ContentAndMedia {
+            빈 프로젝트를 준비하고 필요한 에셋을 Project Browser에 모읍니다. 이 튜토리얼에서는 영문 UI 명칭을 기준으로 설명합니다.
+
+            @Image(source: "step05-project-browser.png", alt: "필요한 에셋이 모두 표시된 Project Browser placeholder")
+        }
+
+        @Steps {
+            @Step {
+                Reality Composer Pro 3를 실행합니다. Welcome 화면이 나타나면 새 프로젝트를 시작할 준비를 합니다.
+
+                @Image(source: "step01-open-rcp.png", alt: "Reality Composer Pro 3 Welcome 화면 placeholder")
+            }
+
+            @Step {
+                Welcome 화면에서 새 프로젝트 생성 항목을 선택합니다. 템플릿을 고르는 화면이 보이면 빈 장면으로 시작할 수 있는 항목을 선택합니다.
+
+                @Image(source: "step02-new-project.png", alt: "새 Reality Composer Pro 프로젝트 생성 화면 placeholder")
+            }
+
+            @Step {
+                프로젝트 이름을 `SnowVillage`로 입력하고 작업 폴더에 저장합니다. 이후 단계에서 장면과 스크린샷을 다시 찾기 쉽도록 같은 이름을 사용합니다.
+
+                @Image(source: "step03-project-name.png", alt: "SnowVillage 프로젝트 이름 입력 화면 placeholder")
+            }
+
+            @Step {
+                Finder에서 Floor, Igloo, Tree, Rock, Log, Signpost, Snowman 파일을 선택해 Project Browser로 드래그합니다. USD와 USDZ 파일을 함께 사용할 수 있습니다.
+
+                @Image(source: "step04-import-assets.png", alt: "Finder의 3D 에셋을 Project Browser로 가져오는 화면 placeholder")
+            }
+
+            @Step {
+                Project Browser에서 7개 에셋이 모두 보이는지 확인합니다. 누락되었거나 경고가 표시된 파일이 있으면 다음 단계로 넘어가기 전에 다시 가져옵니다.
+
+                @Image(source: "step05-project-browser.png", alt: "Floor, Igloo, Tree, Rock, Log, Signpost, Snowman이 표시된 Project Browser placeholder")
+            }
+        }
+    }
+
+    @Section(title: "기준 오브젝트 배치하기") {
+        @ContentAndMedia {
+            Floor를 원점에 놓고 Igloo와 Tree를 추가합니다. 먼저 기준이 되는 큰 오브젝트를 배치하면 나머지 소품의 크기와 간격을 판단하기 쉽습니다.
+
+            @Image(source: "step08-igloo.png", alt: "Floor 위에 Igloo가 배치된 화면 placeholder")
+        }
+
+        @Steps {
+            @Step {
+                Project Browser의 Floor 에셋을 Viewport 또는 Hierarchy로 드래그해 장면에 추가합니다.
+
+                @Image(source: "step06-floor.png", alt: "Floor 에셋을 장면에 추가하는 화면 placeholder")
+            }
+
+            @Step {
+                Hierarchy에서 Floor를 선택하고 Inspector의 Transform에서 Position X, Y, Z를 각각 `0`으로 입력합니다. Floor가 이후 배치의 기준점이 됩니다.
+
+                @Image(source: "step07-floor-position.png", alt: "Floor의 Position X Y Z가 모두 0인 Inspector 화면 placeholder")
+            }
+
+            @Step {
+                Igloo를 Floor 위로 드래그하고 마을의 중심이 될 위치에 놓습니다. Floor 아래로 파묻히거나 공중에 뜨지 않았는지 옆 각도에서도 확인합니다.
+
+                @Image(source: "step08-igloo.png", alt: "Floor 위에 배치한 Igloo placeholder")
+            }
+
+            @Step {
+                Tree를 장면에 하나 추가하고 Igloo와 비교해 Scale이 자연스러운지 확인합니다. 필요하면 Inspector의 Transform에서 균일한 Scale 값을 사용합니다.
+
+                @Image(source: "step09-tree.png", alt: "Igloo 옆에 Tree 하나를 배치한 화면 placeholder")
+            }
+
+            @Step {
+                Tree를 선택한 상태에서 `Command-D`를 눌러 두세 개 복제합니다. 복제된 Tree는 서로 겹치지 않도록 임시로 떨어뜨려 둡니다.
+
+                @Image(source: "step10-tree-duplicate.png", alt: "Command-D로 복제한 여러 Tree placeholder")
+            }
+        }
+    }
+
+    @Section(title: "마을 구성 완성하기") {
+        @ContentAndMedia {
+            Move와 Rotate Gizmo를 사용해 자연스러운 구도를 만듭니다. 아래 배치는 예시이므로 에셋의 위치와 방향은 원하는 분위기에 맞게 바꿔도 됩니다.
+
+            @Image(source: "step14-complete-layout.png", alt: "눈을 추가하기 전 완성된 겨울 마을 placeholder")
+        }
+
+        @Steps {
+            @Step {
+                Move Gizmo의 축 핸들을 드래그해 복제한 Tree를 Floor 가장자리와 Igloo 주변으로 이동합니다. 한 방향에서만 보지 말고 Viewport를 회전해 깊이를 확인합니다.
+
+                @Image(source: "step11-move.png", alt: "Move Gizmo로 Tree의 위치를 조정하는 화면 placeholder")
+            }
+
+            @Step {
+                Rotate Gizmo를 사용해 Tree가 모두 같은 방향을 향하지 않도록 조금씩 회전합니다. 작은 각도 차이만으로도 반복 배치가 자연스러워집니다.
+
+                @Image(source: "step12-rotate.png", alt: "Rotate Gizmo로 Tree의 방향을 조정하는 화면 placeholder")
+            }
+
+            @Step {
+                Rock, Log, Signpost, Snowman을 장면에 추가합니다. Signpost는 입구 쪽에, Snowman은 Igloo 가까이에 두고 Rock과 Log로 빈 공간을 채웁니다.
+
+                @Image(source: "step13-layout.png", alt: "Rock, Log, Signpost, Snowman을 배치하는 화면 placeholder")
+            }
+
+            @Step {
+                전체 장면을 여러 각도에서 확인하고 오브젝트의 겹침, 공중에 뜬 에셋, Floor 밖으로 벗어난 에셋을 정리한 뒤 저장합니다.
+
+                @Image(source: "step14-complete-layout.png", alt: "눈 효과가 없는 기본 겨울 마을 완성 화면 placeholder")
+            }
+        }
+    }
+}
