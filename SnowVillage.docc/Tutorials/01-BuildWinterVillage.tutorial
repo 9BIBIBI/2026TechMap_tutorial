@@ -1,13 +1,13 @@
 @Tutorial(time: 15) {
     @Intro(title: "3D 에셋 임포트 및 씬 구성") {
-        Reality Composer Pro 3 새 프로젝트를 만들고, 3D 에셋 및 조명을 추가하여 자유롭게 겨울 디오라마를 구성합니다.
+        Reality Composer Pro 3에서 새 프로젝트를 만들고, 3D 에셋과 조명을 추가하여 자유롭게 겨울 디오라마를 구성합니다.
 
         @Image(source: "chapter1-cover.png", alt: "눈 효과를 넣기 전 겨울 마을 배치 화면 placeholder")
     }
 
     @Section(title: "프로젝트 만들기") {
         @ContentAndMedia {
-            Reality Composer Pro 3의 빈 프로젝트를 만들고, 필요한 3D 에셋을 Project Browser에 불러옵니다.
+            Reality Composer Pro 3의 빈 프로젝트를 만들고, 다운로드한 3D 에셋을 Project Browser에 불러옵니다.
 
             @Image(source: "step05-project-browser.png", alt: "필요한 에셋이 모두 표시된 Project Browser placeholder")
         }
@@ -20,19 +20,19 @@
             }
 
             @Step {
-                Project Browser에서 Import Asset를 눌러 Finder를 엽니다.
+                Project Browser에서 'Import Asset' 아이콘을 눌러 Finder를 엽니다.
 
                 @Image(source: "step02-new-project.png", alt: "새 Reality Composer Pro 프로젝트 생성 화면 placeholder")
             }
 
             @Step {
-                다운 받은 3D 에셋(Floor, Igloo, Tree, Rock, Log, Signpost, Snowman)들을 모두 선택하고 Open을 눌러 Project Browser로 임포트 합니다.
+                다운로드한 3D 에셋(Floor, Igloo, Tree, Rock, Log, Signpost, Snowman)들을 모두 선택하고 Open을 눌러 Project Browser로 임포트합니다.
 
                 @Image(source: "step03-project-name.png", alt: "SnowVillage 프로젝트 이름 입력 화면 placeholder")
             }
 
             @Step {
-                Project Browser에서 7개 에셋이 모두 보이는지 확인합니다. 우측에 미리보기 창에서 확인할 수 있습니다.
+                Project Browser에서 7개 에셋이 모두 보이는지 확인합니다. 오른쪽 미리보기 창에서 에셋을 확인할 수 있습니다.
 
                 @Image(source: "step05-project-browser.png", alt: "Floor, Igloo, Tree, Rock, Log, Signpost, Snowman이 표시된 Project Browser placeholder")
             }
@@ -48,11 +48,11 @@
 
         @Steps {
             @Step {
-                Project Browser의 Floor 에셋을 Viewport 또는 Hierarchy로 드래그해 장면에 추가합니다.
+                Project Browser의 Floor 에셋을 Viewport 또는 Hierarchy로 드래그하여 장면에 추가합니다.
 
                 ---
 
-                Hierarchy에 드래그하면 자동으로 Position X, Y, Z 값이 0으로 설정됩니다.
+                Hierarchy에 에셋을 드래그하면 에셋의 Position X, Y, Z 값이 0으로 설정됩니다.
 
                 @Image(source: "step06-floor.png", alt: "Floor 에셋을 장면에 추가하는 화면 placeholder")
             }
@@ -70,21 +70,21 @@
             }
 
             @Step {
-                Project Browser에서 Tree를 Floor 위로 드래그 하여 에셋을 추가합니다. Tree가 선택된 상태에서 Gizmo의 화살표를 사용하여 위치를 이동합니다. 
+                Project Browser에서 Tree를 Floor 위로 드래그하여 에셋을 추가합니다. Tree가 선택된 상태에서 Gizmo의 화살표를 사용하여 위치를 이동합니다. 
 
                 ---
 
-                Gizmo의 X, Z 화살표 사이의 초록색 사각형을 잡고 움직이면 Y값은 유지한 채 X축과 Z축으로만 이동할 수 있어 에셋을 이동하기에 편리합니다.
+                Gizmo의 X, Z 화살표 사이의 초록색 사각형을 잡고 움직이면 Y 값은 유지한 채 X축과 Z축으로만 이동할 수 있어 에셋을 이동하기에 편리합니다.
 
                 @Image(source: "step08-igloo.png", alt: "Floor 위에 배치한 Igloo placeholder")
             }
 
             @Step {
-                그대로 Tree가 선택된 상태에서 'R'키를 눌러 Scale Gizmo로 전환하고, Gizmo 중앙의 회색 사각형을 잡고 위아래로 움직여 Tree의 크기를 일정하게 조절합니다.
+                그대로 Tree가 선택된 상태에서 'R' 키를 눌러 Scale Gizmo로 전환하고, Scale Gizmo 중앙의 사각형 핸들을 잡고 위아래로 움직여 Tree의 크기를 균일하게 조절합니다.
 
                 ---
 
-                정확한 비율로 크기를 조절하고 싶다면 에셋을 선택한 상태에서 우측 Inspector 창의 Transform Component > Scale에서 X, Y, Z 값을 입력합니다. 세 축에 같은 값을 입력하면 에셋의 비율은 유지한 채 크기를 조절할 수 있습니다.
+                정확한 수치로 크기를 조절하고 싶다면 에셋을 선택한 상태에서 우측 Inspector 창의 Transform Component > Scale에서 X, Y, Z 값을 입력합니다. 세 축에 같은 값을 입력하면 에셋의 비율은 유지한 채 크기를 조절할 수 있습니다.
 
                 @Image(source: "step09-tree.png", alt: "Igloo 옆에 Tree 하나를 배치한 화면 placeholder")
             }
@@ -101,8 +101,11 @@
 
                 ---
 
-                단축키
-                'W' > 이동, 'E' > 회전, 'R' > 크기
+                **Transform 단축키**
+
+                - `W`: 이동
+                - `E`: 회전
+                - `R`: 크기 조절
 
                 @Image(source: "step10-tree-duplicate.png", alt: "Command-D로 복제한 여러 Tree placeholder")
             }
