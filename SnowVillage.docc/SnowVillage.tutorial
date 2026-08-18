@@ -1,5 +1,5 @@
 @Tutorials(name: "Reality Composer Pro 3") {
-    @Intro(title: "Reality Composer Pro 3로 눈 내리는 겨울 디오라마 만들기") {
+    @Intro(title: "눈 내리는 겨울 디오라마 만들기") {
         Reality Composer Pro 3에서 3D 에셋을 자유롭게 배치하고, 조명과 애니메이션, 눈 파티클을 더해 겨울 디오라마를 완성합니다.
 
     }
