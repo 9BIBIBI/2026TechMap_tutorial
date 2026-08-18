@@ -5,9 +5,8 @@ Reality Composer Pro 3에서 3D 에셋을 배치하고 Directional Light, 애니
 ## 준비물
 
 - Apple silicon Mac
-- Reality Composer Pro 3 (Snow 프리셋이 포함된 버전, Beta 4 이상)
+- Reality Composer Pro 3 (Beta 4 이상)
 - macOS Tahoe 26.5 이상
-- Xcode 또는 Swift toolchain의 `docc`
 - Floor, Igloo, Tree, Rock, Log, Signpost, 애니메이션이 포함된 Snowman 에셋
 
 ## 폴더 구조
