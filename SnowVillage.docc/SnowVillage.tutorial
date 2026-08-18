@@ -1,4 +1,4 @@
-@Tutorials(name: "Reality Composer Pro 3") {
+@Tutorials(name: "눈 내리는 겨울 디오라마 만들기") {
     @Intro(title: "Reality Composer Pro 3로 눈 내리는 겨울 디오라마 만들기") {
         Reality Composer Pro 3에서 3D 에셋을 자유롭게 배치하고, 조명과 애니메이션, 눈 파티클을 더해 겨울 디오라마를 완성합니다.
 
@@ -13,7 +13,7 @@
         @TutorialReference(tutorial: "doc:01-BuildWinterVillage")
     }
 
-    @Chapter(name: "애니메이션과 눈 파티클로 생동감 더하기") {
+    @Chapter(name: "Animation 및 Particle") {
         3D 에셋의 애니메이션을 불러오고 Particle Emitter를 설정해 장면에 움직임과 눈 효과를 더합니다.
 
         @Image(source: "chapter2-cover.png", alt: "라이팅과 눈 파티클이 적용된 겨울 마을 placeholder")
