@@ -1,6 +1,6 @@
-@Tutorial(time: 10) {
-    @Intro(title: "겨울 분위기 연출하기") {
-        기본 장면에 Directional Light를 추가하고 Snowman 애니메이션을 반복 재생한 다음, Particle Emitter의 Snow 프리셋을 조절해 눈 내리는 겨울 마을을 완성합니다.
+@Tutorial(time: 15) {
+    @Intro(title: "애니메이션과 눈 파티클로 생동감 더하기") {
+        3D 에셋에 포함되어 있는 애니메이션을 불러와 반복 재생하고, Particle Emitter의 Snow 프리셋을 추가하여 눈 내리는 겨울 디오라마를 완성합니다.
 
         @Image(source: "chapter2-cover.png", alt: "라이팅과 눈 파티클이 적용된 겨울 마을 placeholder")
     }
