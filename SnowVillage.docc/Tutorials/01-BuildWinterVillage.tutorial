@@ -50,8 +50,6 @@
             @Step {
                 Project Browser의 Floor 에셋을 Viewport 또는 Hierarchy로 드래그하여 장면에 추가합니다.
 
-                ---
-
                 Hierarchy에 에셋을 드래그하면 에셋의 Position X, Y, Z 값이 0으로 설정됩니다.
 
                 @Image(source: "step06-floor.png", alt: "Floor 에셋을 장면에 추가하는 화면 placeholder")
@@ -72,8 +70,6 @@
             @Step {
                 Project Browser에서 Tree를 Floor 위로 드래그하여 에셋을 추가합니다. Tree가 선택된 상태에서 Gizmo의 화살표를 사용하여 위치를 이동합니다. 
 
-                ---
-
                 Gizmo의 X, Z 화살표 사이의 초록색 사각형을 잡고 움직이면 Y 값은 유지한 채 X축과 Z축으로만 이동할 수 있어 에셋을 이동하기에 편리합니다.
 
                 @Image(source: "step08-igloo.png", alt: "Floor 위에 배치한 Igloo placeholder")
@@ -81,8 +77,6 @@
 
             @Step {
                 그대로 Tree가 선택된 상태에서 'R' 키를 눌러 Scale Gizmo로 전환하고, Scale Gizmo 중앙의 사각형 핸들을 잡고 위아래로 움직여 Tree의 크기를 균일하게 조절합니다.
-
-                ---
 
                 정확한 수치로 크기를 조절하고 싶다면 에셋을 선택한 상태에서 우측 Inspector 창의 Transform Component > Scale에서 X, Y, Z 값을 입력합니다. 세 축에 같은 값을 입력하면 에셋의 비율은 유지한 채 크기를 조절할 수 있습니다.
 
@@ -98,14 +92,7 @@
             @Step {
                 남은 3D 에셋(Rock, Log, Signpost, Snowman)을 추가하여 디오라마를 자유롭게 구성합니다.
 
-
-                ---
-
-                **Transform 단축키**
-
-                - `W`: 이동
-                - `E`: 회전
-                - `R`: 크기 조절
+                **Transform 단축키** : `W`: 이동, `E`: 회전, `R`: 크기 조절
 
                 @Image(source: "step10-tree-duplicate.png", alt: "Command-D로 복제한 여러 Tree placeholder")
             }
