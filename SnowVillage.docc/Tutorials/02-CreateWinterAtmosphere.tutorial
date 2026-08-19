@@ -2,46 +2,46 @@
     @Intro(title: "애니메이션 및 파티클") {
         3D 에셋에 포함되어 있는 애니메이션을 불러와 반복 재생하고, Particle Emitter의 눈 효과를 추가하여 눈 내리는 겨울 디오라마를 완성합니다.
 
-        @Image(source: "chapter2-cover.png", alt: "라이팅과 눈 파티클이 적용된 겨울 마을 placeholder")
+        @Image(source: "Main.png", alt: "라이팅과 눈 파티클이 적용된 겨울 마을 placeholder")
     }
 
     @Section(title: "3D 에셋의 애니메이션 불러오기") {
         @ContentAndMedia {
             3D 에셋에 포함된 애니메이션을 Animation Library Component에 추가하고 반복 재생하도록 설정합니다.
 
-            @Image(source: "step20-repeat.png", alt: "Animation Library Component에서 애니메이션을 설정하는 화면 placeholder")
+            @Image(source: "C2_05.png", alt: "Animation Library Component에서 애니메이션을 설정하는 화면 placeholder")
         }
 
         @Steps {
             @Step {
                 왼쪽 화면의 Hierarchy에서 Snowman을 선택합니다. Inspector 아래의 Add Component를 누르고 Animation Library Component를 추가합니다.
 
-                @Image(source: "step19-snowman.png", alt: "Snowman에 Animation Library Component를 추가하는 화면 placeholder")
+                @Image(source: "C2_01.png", alt: "Snowman에 Animation Library Component를 추가하는 화면 placeholder")
             }
 
             @Step {
                 Animation Library Component의 `+` 버튼을 누르고 오른쪽 빈칸을 눌러 Snowman 에셋에 포함된 `Snowman_transform` 애니메이션을 선택합니다.
 
-                @Image(source: "step20-repeat.png", alt: "Snowman_transform 애니메이션이 추가된 Animation Library Component 화면 placeholder")
+                @Image(source: "C2_03.png", alt: "Snowman_transform 애니메이션이 추가된 Animation Library Component 화면 placeholder")
             }
 
             @Step {
                 Animation Library Component 상단의 Auto Play를 켜 자동으로 애니메이션이 재생되도록 설정합니다.
 
-                @Image(source: "step21-animation.png", alt: "Auto Play를 켜고 Snowman 애니메이션을 재생하는 화면 placeholder")
+                @Image(source: "C2_04.png", alt: "Auto Play를 켜고 Snowman 애니메이션을 재생하는 화면 placeholder")
             }
 
             @Step {
                 Animation Library Component에서 Repeat Mode를 `Repeat`로 변경하고 바로 아래 `Repeats Forever`의 토글을 켜 애니메이션이 반복되도록 설정합니다.
 
-                @Image(source: "step20-repeat.png", alt: "애니메이션의 Repeat Mode와 Repeats Forever를 설정하는 화면 placeholder")
+                @Image(source: "C2_05.png", alt: "애니메이션의 Repeat Mode와 Repeats Forever를 설정하는 화면 placeholder")
             }
 
 
             @Step {
                 Workspace 상단의 재생(▶) 버튼을 눌러 Snowman 애니메이션이 재생되는지 확인합니다.
 
-                @Image(source: "step21-animation.png", alt: "Auto Play를 켜고 Snowman 애니메이션을 재생하는 화면 placeholder")
+                @Image(source: "C2_06.png", alt: "Auto Play를 켜고 Snowman 애니메이션을 재생하는 화면 placeholder")
             }
 
         }
@@ -51,63 +51,70 @@
         @ContentAndMedia {
             빈 Entity에 Particle Emitter Component를 추가합니다. 눈 효과를 적용한 뒤 눈이 내리는 범위와 양, 크기 등을 조절합니다.
 
-            @Image(source: "step23-snow-preset.png", alt: "Particle Emitter에 눈 효과를 적용한 화면 placeholder")
+            @Image(source: "C2_17.png", alt: "Particle Emitter에 눈 효과를 적용한 화면 placeholder")
         }
 
         @Steps {
             @Step {
                아무것도 선택하지 않은 상태에서 왼쪽 Hierarchy 창 하단의 + 버튼을 누릅니다. Add Child Entity > Empty를 선택하여 빈 Entity를 생성하고 이름을 `SnowEmitter`로 변경합니다.
 
-                @Image(source: "step22-particle.png", alt: "SnowEmitter라는 이름의 빈 Entity를 생성한 화면 placeholder")
+                @Image(source: "C2_07.png", alt: "SnowEmitter라는 이름의 빈 Entity를 생성한 화면 placeholder")
             }
 
             @Step {
                 `SnowEmitter`를 선택하고 Space 키를 누르거나 오른쪽 Inspector 창의 Add Component를 선택합니다. 검색창에서 Particle Emitter를 찾아 Component를 추가합니다. 
 
-                @Image(source: "step23-snow-preset.png", alt: "Particle Emitter에 Snow 프리셋을 적용하는 화면 placeholder")
+                @Image(source: "C2_09.png", alt: "Particle Emitter에 Snow 프리셋을 적용하는 화면 placeholder")
             }
 
             @Step {
                 오른쪽 Inspector의 Particle Emitter에서 Presets를 눌러 `Snow`를 선택하고, Workspace 상단의 재생(▶) 버튼을 눌러 눈 파티클을 재생합니다.
 
 
-                @Image(source: "step24-particle-position.png", alt: "SnowEmitter의 위치와 방출 범위를 조절하는 화면 placeholder")
+                @Image(source: "C2_10.png", alt: "SnowEmitter의 위치와 방출 범위를 조절하는 화면 placeholder")
             }
 
             @Step {
                 Particle Emitter의 Particles 탭에서 Properties > Size 값을 `0.15`로 변경하여 파티클의 크기를 조절합니다.
 
-                @Image(source: "step25-birthrate.png", alt: "눈 파티클의 Birth Rate를 조절하는 화면 placeholder")
+                @Image(source: "C2_11.png", alt: "눈 파티클의 Birth Rate를 조절하는 화면 placeholder")
             }
 
             @Step {
-                    Particle Emitter의 Emitter 탭을 선택하여 Shape에서 `Sphere`로 변경하고, Shape Size의 X, Y, Z 값을 `1.2`, `0.8`, `1.2`로 설정하여 파티클이 생성되는 영역의 크기를 조절합니다.
+                    Particle Emitter의 Emitter 탭을 선택하여 Shape에서 `Sphere`로 변경합니다.
 
-                @Image(source: "step26-size.png", alt: "눈 파티클의 Size를 조절하는 화면 placeholder")
+                @Image(source: "C2_12.png", alt: "눈 파티클의 Size를 조절하는 화면 placeholder")
             }
+
+            @Step {
+                    Shape Size의 X, Y, Z 값을 `1.2`, `0.8`, `1.2`로 설정하여 파티클이 생성되는 영역의 크기를 조절합니다.
+
+                @Image(source: "C2_13.png", alt: "눈 파티클의 Size를 조절하는 화면 placeholder")
+            }
+
 
             @Step {
                   Birth Location을 `Volume`으로 변경하여 파티클이 Sphere 내부 전체에서 생성되도록 설정합니다.
 
-                @Image(source: "step27-lifespan.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
+                @Image(source: "C2_14.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
             }
 
             @Step {
                   SnowEmitter Entity의 Transform Component에서 Position의 X, Y, Z 값을 `0`, `0.6`, `0`으로 설정하여 파티클이 생성되는 위치를 조절합니다.
 
-                @Image(source: "step27-lifespan.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
+                @Image(source: "C2_15.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
             }
 
             @Step {
                   Particle Emitter의 Particles 탭에서 Birth Rate를 `180`으로 설정하여 파티클의 양을 조절합니다.
 
-                @Image(source: "step27-lifespan.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
+                @Image(source: "C2_16.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
             }
 
             @Step {
                   재생되는 눈 파티클을 확인합니다. 필요한 경우 Size, Shape Size, Position, Birth Rate를 자유롭게 조절하여 눈 내리는 겨울 디오라마를 완성합니다.
 
-                @Image(source: "step27-lifespan.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
+                @Image(source: "C2_17.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
             }
 
         }
