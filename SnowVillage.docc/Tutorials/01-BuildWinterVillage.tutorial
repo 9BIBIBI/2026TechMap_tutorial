@@ -92,13 +92,14 @@
             @Step {
                 남은 3D 에셋(Rock, Log, Signpost, Snowman)을 추가하여 디오라마를 자유롭게 구성합니다.
 
-                **Transform 단축키** : `W`: 이동, `E`: 회전, `R`: 크기 조절
+                **Transform 단축키** `W`: 이동, `E`: 회전, `R`: 크기 조절
 
                 @Image(source: "step10-tree-duplicate.png", alt: "Command-D로 복제한 여러 Tree placeholder")
             }
 
         }
     }
+
 
     @Section(title: "Directional Light 추가하기") {
         @ContentAndMedia {
@@ -110,25 +111,34 @@
 
         @Steps {
             @Step {
-                Move Gizmo의 축 핸들을 드래그해 복제한 Tree를 Floor 가장자리와 Igloo 주변으로 이동합니다. 한 방향에서만 보지 말고 Viewport를 회전해 깊이를 확인합니다.
+                아무것도 선택하지 않은 상태에서 왼쪽 Hierarchy 창 하단의 `+` 버튼을 누릅니다. `Add Child Entity > Empty`를 선택하여 빈 Entity를 생성하고 이름을 `DirectionalLight`로 변경합니다.
+                
 
                 @Image(source: "step11-move.png", alt: "Move Gizmo로 Tree의 위치를 조정하는 화면 placeholder")
             }
 
             @Step {
-                Rotate Gizmo를 사용해 Tree가 모두 같은 방향을 향하지 않도록 조금씩 회전합니다. 작은 각도 차이만으로도 반복 배치가 자연스러워집니다.
+                `DirectionalLight` Entity를 선택하고 `Space` 키를 누르거나 오른쪽 Inspector 창의 `Add Component`를 선택합니다. 검색창에서 `Directional Light`를 찾아 Component를 추가합니다.
 
                 @Image(source: "step12-rotate.png", alt: "Rotate Gizmo로 Tree의 방향을 조정하는 화면 placeholder")
             }
 
             @Step {
-                Rock, Log, Signpost, Snowman을 장면에 추가합니다. Signpost는 입구 쪽에, Snowman은 Igloo 가까이에 두고 Rock과 Log로 빈 공간을 채웁니다.
+                오른쪽 Directional Light Component에서 Intensity를 1500으로 입력하여 밝기를 조절합니다.
+
+                Intensity 숫자 입력칸에 마우스 포인터를 올리고 `Option` 키를 누른 상태에서 좌우로 드래그하면 값을 빠르게 조절할 수 있습니다. 오른쪽으로 드래그하면 밝아지고 왼쪽으로 드래그하면 어두워집니다.
 
                 @Image(source: "step13-layout.png", alt: "Rock, Log, Signpost, Snowman을 배치하는 화면 placeholder")
             }
 
             @Step {
-                전체 장면을 여러 각도에서 확인하고 오브젝트의 겹침, 공중에 뜬 에셋, Floor 밖으로 벗어난 에셋을 정리한 뒤 저장합니다.
+                오른쪽 Directional Light Component에서 Color 항목을 선택하여 색상 창을 엽니다. Viewport를 확인하면서 겨울 디오라마에 어울리는 조명 색상을 설정합니다.
+
+                @Image(source: "step14-complete-layout.png", alt: "눈 효과가 없는 기본 겨울 마을 완성 화면 placeholder")
+            }
+
+            @Step {
+                `DirectionalLight` Entity를 선택하고 `E` 키를 눌러 회전 링을 드래그하거나 Inspector의 Transform Component에서 Rotation 값을 입력하여 빛의 방향을 조절합니다.
 
                 @Image(source: "step14-complete-layout.png", alt: "눈 효과가 없는 기본 겨울 마을 완성 화면 placeholder")
             }
