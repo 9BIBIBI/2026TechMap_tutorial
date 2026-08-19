@@ -68,7 +68,7 @@
             }
 
             @Step {
-                오른쪽 Inspector의 Particle Emitter에서 Presets을 눌러 `Snow`를 선택하고, Workspace 상단의 재생(▶) 버튼을 눌러 눈 파티클을 재생합니다.
+                오른쪽 Inspector의 Particle Emitter에서 Presets를 눌러 `Snow`를 선택하고, Workspace 상단의 재생(▶) 버튼을 눌러 눈 파티클을 재생합니다.
 
 
                 @Image(source: "step24-particle-position.png", alt: "SnowEmitter의 위치와 방출 범위를 조절하는 화면 placeholder")
@@ -81,7 +81,7 @@
             }
 
             @Step {
-                    Particle Emitter의 Emitter 탭을 선택하여 Shape에서 `Sphere`로 변경하여 Sphere 형태로 파티클이 생성되게 설정합니다. Shape Size의 X, Y, Z 값을 `1.2`, `0.8`, `1.2`로 설정하여 파티클의 영역 크기를 조절합니다.
+                    Particle Emitter의 Emitter 탭을 선택하여 Shape에서 `Sphere`로 변경하고, Shape Size의 X, Y, Z 값을 `1.2`, `0.8`, `1.2`로 설정하여 파티클이 생성되는 영역의 크기를 조절합니다.
 
                 @Image(source: "step26-size.png", alt: "눈 파티클의 Size를 조절하는 화면 placeholder")
             }
