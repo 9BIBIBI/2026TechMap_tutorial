@@ -13,7 +13,7 @@
         @TutorialReference(tutorial: "doc:01-BuildWinterVillage")
     }
 
-    @Chapter(name: "애니메이션 및 파티클") {
+    @Chapter(name: "겨울 디오라마 연출하기") {
         3D 에셋의 애니메이션을 불러오고 Particle Emitter를 설정해 장면에 움직임과 눈 효과를 더합니다.
 
         @Image(source: "chapter2-cover.png", alt: "애니메이션과 눈 파티클이 적용된 겨울 디오라마 placeholder")
