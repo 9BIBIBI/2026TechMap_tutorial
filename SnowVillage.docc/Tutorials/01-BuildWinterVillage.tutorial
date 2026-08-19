@@ -20,7 +20,7 @@
             }
 
             @Step {
-                Project Browser에서 'Import Asset' 아이콘을 눌러 Finder를 엽니다.
+                Project Browser에서 `Import Asset` 아이콘을 눌러 Finder를 엽니다.
 
                 @Image(source: "step02-new-project.png", alt: "새 Reality Composer Pro 프로젝트 생성 화면 placeholder")
             }
@@ -76,7 +76,7 @@
             }
 
             @Step {
-                그대로 Tree가 선택된 상태에서 'R' 키를 눌러 Scale Gizmo로 전환하고, Scale Gizmo 중앙의 사각형 핸들을 잡고 위아래로 움직여 Tree의 크기를 균일하게 조절합니다.
+                그대로 Tree가 선택된 상태에서 `R` 키를 눌러 Scale Gizmo로 전환하고, Scale Gizmo 중앙의 사각형 핸들을 잡고 위아래로 움직여 Tree의 크기를 균일하게 조절합니다.
 
                 정확한 수치로 크기를 조절하고 싶다면 에셋을 선택한 상태에서 우측 Inspector 창의 Transform Component > Scale에서 X, Y, Z 값을 입력합니다. 세 축에 같은 값을 입력하면 에셋의 비율은 유지한 채 크기를 조절할 수 있습니다.
 
@@ -124,7 +124,7 @@
             }
 
             @Step {
-                오른쪽 Directional Light Component에서 Intensity를 1500으로 입력하여 밝기를 조절합니다.
+                오른쪽 Directional Light Component에서 Intensity에 `1500`을 입력하여 밝기를 조절합니다.
 
                 Intensity 숫자 입력칸에 마우스 포인터를 올리고 `Option` 키를 누른 상태에서 좌우로 드래그하면 값을 빠르게 조절할 수 있습니다. 오른쪽으로 드래그하면 밝아지고 왼쪽으로 드래그하면 어두워집니다.
 
@@ -138,7 +138,7 @@
             }
 
             @Step {
-                `DirectionalLight` Entity를 선택하고 `E` 키를 눌러 회전 링을 드래그하거나 Inspector의 Transform Component에서 Rotation 값을 입력하여 빛의 방향을 조절합니다.
+                `DirectionalLight` Entity를 선택하고 `E` 키를 눌러 Rotate Gizmo로 전환합니다. 회전 링을 드래그하거나 Inspector의 Transform Component에서 Rotation 값을 입력하여 빛의 방향을 조절합니다.
 
                 @Image(source: "step14-complete-layout.png", alt: "눈 효과가 없는 기본 겨울 마을 완성 화면 placeholder")
             }
