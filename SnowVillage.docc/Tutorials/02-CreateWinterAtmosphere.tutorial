@@ -1,137 +1,116 @@
 @Tutorial(time: 15) {
     @Intro(title: "애니메이션과 눈 파티클로 생동감 더하기") {
-        3D 에셋에 포함되어 있는 애니메이션을 불러와 반복 재생하고, Particle Emitter의 Snow 프리셋을 추가하여 눈 내리는 겨울 디오라마를 완성합니다.
+        3D 에셋에 포함되어 있는 애니메이션을 불러와 반복 재생하고, Particle Emitter의 눈 효과를 추가하여 눈 내리는 겨울 디오라마를 완성합니다.
 
         @Image(source: "chapter2-cover.png", alt: "라이팅과 눈 파티클이 적용된 겨울 마을 placeholder")
     }
 
-    @Section(title: "차가운 겨울빛 만들기") {
+    @Section(title: "눈사람 애니메이션 불러오기") {
         @ContentAndMedia {
-            Directional Light는 위치와 관계없이 일정한 방향으로 장면을 비춥니다. Rotation으로 빛의 방향을 정하고 Intensity로 전체 밝기를 조절합니다.
+            3D 에셋에 포함된 애니메이션을 Animation Library Component에 추가하고 반복 재생하도록 설정합니다.
 
-            @Image(source: "step18-shadow.png", alt: "Directional Light가 만든 그림자가 보이는 장면 placeholder")
+            @Image(source: "step20-repeat.png", alt: "Animation Library Component에서 애니메이션을 설정하는 화면 placeholder")
         }
 
         @Steps {
             @Step {
-                Hierarchy의 추가 버튼에서 Light 항목을 열고 Directional Light를 장면에 추가합니다. 이름은 `WinterLight`로 바꿉니다.
+                왼쪽 화면의 Hierarchy에서 Snowman을 선택합니다. Inspector 아래의 Add Component를 누르고 Animation Library Component를 추가합니다.
 
-                @Image(source: "step15-directional-light.png", alt: "Directional Light를 장면에 추가하는 화면 placeholder")
+                @Image(source: "step19-snowman.png", alt: "Snowman에 Animation Library Component를 추가하는 화면 placeholder")
             }
 
             @Step {
-                `WinterLight`를 선택하고 Rotate Gizmo 또는 Transform의 Rotation 값을 조절해 빛이 Igloo 앞쪽과 Snowman을 향하도록 합니다.
+                Animation Library Component의 `+` 버튼을 누르고 오른쪽 빈칸을 눌러 Snowman 에셋에 포함된 `Snowman_transform` 애니메이션을 선택합니다.
 
-                @Image(source: "step16-light-rotation.png", alt: "Directional Light의 Rotation을 조절하는 화면 placeholder")
+                @Image(source: "step20-repeat.png", alt: "Snowman_transform 애니메이션이 추가된 Animation Library Component 화면 placeholder")
             }
 
             @Step {
-                Inspector에서 Intensity를 조금씩 바꾸며 눈 재질의 밝은 부분이 날아가지 않고 오브젝트의 형태가 보이는 수준을 찾습니다. 에셋의 재질과 단위에 따라 적절한 값이 다르므로 화면을 기준으로 결정합니다.
+                Animation Library Component 상단의 Auto Play를 켜 자동으로 애니메이션이 재생되도록 설정합니다.
 
-                @Image(source: "step17-light-intensity.png", alt: "Directional Light의 Intensity를 조절하는 Inspector placeholder")
+                @Image(source: "step21-animation.png", alt: "Auto Play를 켜고 Snowman 애니메이션을 재생하는 화면 placeholder")
             }
 
             @Step {
-                Floor와 Igloo에 생긴 그림자의 방향과 농도를 확인합니다. 장면이 너무 평평해 보이면 Rotation을 다시 조절하고, 너무 어두우면 Intensity를 보정합니다.
+                Animation Library Component에서 Repeat Mode를 `Repeat`로 변경하고 바로 아래 `Repeats Forever`의 토글을 켜 애니메이션이 반복되도록 설정합니다.
 
-                @Image(source: "step18-shadow.png", alt: "조명과 그림자가 자연스럽게 적용된 겨울 마을 placeholder")
+                @Image(source: "step20-repeat.png", alt: "애니메이션의 Repeat Mode와 Repeats Forever를 설정하는 화면 placeholder")
             }
+
+
+            @Step {
+                Workspace 상단의 재생(▶) 버튼을 눌러 Snowman 애니메이션이 재생되는지 확인합니다.
+
+                @Image(source: "step21-animation.png", alt: "Auto Play를 켜고 Snowman 애니메이션을 재생하는 화면 placeholder")
+            }
+
         }
     }
 
-    @Section(title: "Snowman 애니메이션 반복하기") {
+    @Section(title: "Particle Emitter 추가하기") {
         @ContentAndMedia {
-            Snowman에 포함된 애니메이션 클립을 Sequence에서 재생합니다. 프로젝트에 Sequence가 없다면 Project Browser에서 새 Sequence를 만들고 Snowman을 대상 Entity로 지정한 뒤 클립을 Track에 놓습니다.
+            빈 Entity에 Particle Emitter Component를 추가합니다. 눈 효과를 적용한 뒤 눈이 내리는 범위와 양, 크기 등을 조절합니다.
 
-            @Image(source: "step20-repeat.png", alt: "Sequence Editor에서 Repeat Mode를 설정하는 화면 placeholder")
+            @Image(source: "step23-snow-preset.png", alt: "Particle Emitter에 눈 효과를 적용한 화면 placeholder")
         }
 
         @Steps {
             @Step {
-                Project Browser에서 Snowman의 애니메이션 Sequence를 열고, Snowman 애니메이션 클립이 Track에 연결되어 있는지 확인합니다. Sequence가 없다면 `New > Animation > Sequence`로 만든 뒤 Snowman을 대상 Entity로 선택합니다.
+               아무것도 선택하지 않은 상태에서 왼쪽 Hierarchy 창 하단의 + 버튼을 누릅니다. Add Child Entity > Empty를 선택하여 빈 Entity를 생성하고 이름을 `SnowEmitter`로 변경합니다.
 
-                @Image(source: "step19-snowman.png", alt: "Snowman 애니메이션 클립이 보이는 Sequence Editor placeholder")
+                @Image(source: "step22-particle.png", alt: "SnowEmitter라는 이름의 빈 Entity를 생성한 화면 placeholder")
             }
 
             @Step {
-                Sequence Editor에서 Snowman 애니메이션 클립을 선택하고 Inspector의 Repeat Mode를 `Repeat`로 설정합니다. 계속 반복하려면 Repeats Forever를 켭니다.
+                `SnowEmitter`를 선택하고 Space 키를 누르거나 오른쪽 Inspector 창의 Add Component를 선택합니다. 검색창에서 Particle Emitter를 찾아 Component를 추가합니다. 
 
-                @Image(source: "step20-repeat.png", alt: "Repeat Mode와 Repeats Forever 설정 placeholder")
+                @Image(source: "step23-snow-preset.png", alt: "Particle Emitter에 Snow 프리셋을 적용하는 화면 placeholder")
             }
 
             @Step {
-                Sequence Editor의 Play를 눌러 클립의 시작과 끝이 자연스럽게 이어지는지 확인합니다. 끊겨 보이면 Trim Start와 Trim End를 조금씩 조정합니다.
+                오른쪽 Inspector의 Particle Emitter에서 Presets을 눌러 `Snow`를 선택하고, Workspace 상단의 재생(▶) 버튼을 눌러 눈 파티클을 재생합니다.
 
-                @Image(source: "step21-animation.png", alt: "Snowman 애니메이션을 미리 보는 화면 placeholder")
+
+                @Image(source: "step24-particle-position.png", alt: "SnowEmitter의 위치와 방출 범위를 조절하는 화면 placeholder")
             }
+
+            @Step {
+                Particle Emitter의 Particles 탭에서 Properties > Size 값을 `0.15`로 변경하여 파티클의 크기를 조절합니다.
+
+                @Image(source: "step25-birthrate.png", alt: "눈 파티클의 Birth Rate를 조절하는 화면 placeholder")
+            }
+
+            @Step {
+                    Particle Emitter의 Emitter 탭을 선택하여 Shape에서 `Sphere`로 변경하여 Sphere 형태로 파티클이 생성되게 설정합니다. Shape Size의 X, Y, Z 값을 `1.2`, `0.8`, `1.2`로 설정하여 파티클의 영역 크기를 조절합니다.
+
+                @Image(source: "step26-size.png", alt: "눈 파티클의 Size를 조절하는 화면 placeholder")
+            }
+
+            @Step {
+                  Birth Location을 `Volume`으로 변경하여 파티클이 Sphere 내부 전체에서 생성되도록 설정합니다.
+
+                @Image(source: "step27-lifespan.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
+            }
+
+            @Step {
+                  SnowEmitter Entity의 Transform Component에서 Position의 X, Y, Z 값을 `0`, `0.6`, `0`으로 설정하여 파티클이 생성되는 위치를 조절합니다.
+
+                @Image(source: "step27-lifespan.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
+            }
+
+            @Step {
+                  Particle Emitter의 Particles 탭에서 Birth Rate를 `180`으로 설정하여 파티클의 양을 조절합니다.
+
+                @Image(source: "step27-lifespan.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
+            }
+
+            @Step {
+                  재생되는 눈 파티클을 확인합니다. 필요한 경우 Size, Shape Size, Position, Birth Rate를 자유롭게 조절하여 눈 내리는 겨울 디오라마를 완성합니다.
+
+                @Image(source: "step27-lifespan.png", alt: "눈 파티클의 Life Span을 조절하는 화면 placeholder")
+            }
+
         }
     }
 
-    @Section(title: "눈 파티클 만들기") {
-        @ContentAndMedia {
-            Particle Emitter를 마을 위쪽에 배치하고 Snow 프리셋을 시작점으로 사용합니다. Emitter 탭은 방출 영역을, Particles 탭은 눈송이의 수명과 모양을 제어합니다.
-
-            @Image(source: "step23-snow-preset.png", alt: "Particle Emitter에서 Snow 프리셋을 선택한 화면 placeholder")
-        }
-
-        @Steps {
-            @Step {
-                장면에 새 Entity를 만들고 이름을 `SnowEmitter`로 바꾼 다음, Inspector에서 Add Component를 눌러 Particle Emitter를 추가합니다.
-
-                @Image(source: "step22-particle.png", alt: "SnowEmitter Entity에 Particle Emitter Component를 추가하는 화면 placeholder")
-            }
-
-            @Step {
-                Particle Emitter의 Preset 메뉴에서 `Snow`를 선택합니다. Snow 프리셋이 보이지 않으면 Reality Composer Pro를 Snow 프리셋이 포함된 버전으로 업데이트합니다.
-
-                @Image(source: "step23-snow-preset.png", alt: "Particle Emitter Preset 메뉴에서 Snow를 선택한 화면 placeholder")
-            }
-
-            @Step {
-                `SnowEmitter`를 마을 위쪽으로 이동하고 Emitter의 Shape Size를 넓혀 Floor 전체를 덮도록 합니다. Simulate가 실행 중이면 이동 전에 잠시 정지합니다.
-
-                @Image(source: "step24-particle-position.png", alt: "SnowEmitter의 위치와 방출 영역을 조절하는 화면 placeholder")
-            }
-
-            @Step {
-                Particles 탭에서 Birth Rate를 조절해 동시에 보이는 눈의 양을 정합니다. 낮은 값에서 시작해 올리고, 장면이 끊기면 값을 낮춥니다.
-
-                @Image(source: "step25-birthrate.png", alt: "Particle Emitter의 Birth Rate를 조절하는 화면 placeholder")
-            }
-
-            @Step {
-                Particles 탭에서 Size를 조절해 눈송이 크기를 맞춥니다. Igloo나 Snowman과 비교했을 때 입자가 지나치게 크지 않도록 합니다.
-
-                @Image(source: "step26-size.png", alt: "Particle Emitter의 Size를 조절하는 화면 placeholder")
-            }
-
-            @Step {
-                Life Span을 조절해 눈송이가 Floor 근처까지 내려오기 전에 사라지지 않도록 합니다. Life Span을 늘리면 화면에 남는 입자 수도 늘어날 수 있으므로 Birth Rate와 함께 조정합니다.
-
-                @Image(source: "step27-lifespan.png", alt: "Particle Emitter의 Life Span을 조절하는 화면 placeholder")
-            }
-        }
-    }
-
-    @Section(title: "최종 장면 확인하기") {
-        @ContentAndMedia {
-            조명, 애니메이션, 파티클을 동시에 재생해 완성된 장면을 점검합니다.
-
-            @Image(source: "step29-final-result.png", alt: "눈 내리는 겨울 마을의 최종 결과 placeholder")
-        }
-
-        @Steps {
-            @Step {
-                Workspace 상단의 Simulate를 선택하고 Play를 눌러 전체 장면을 재생합니다. Snowman 애니메이션과 눈 파티클이 동시에 움직이는지 확인합니다.
-
-                @Image(source: "step28-simulate.png", alt: "Reality Composer Pro에서 Simulate를 실행하는 화면 placeholder")
-            }
-
-            @Step {
-                Viewport를 회전하며 눈의 범위, 그림자, 오브젝트 겹침을 마지막으로 확인하고 프로젝트를 저장합니다. 필요하면 Birth Rate, Size, Life Span을 한 번 더 미세 조정합니다.
-
-                @Image(source: "step29-final-result.png", alt: "조명, 애니메이션, 눈 파티클이 적용된 완성 장면 placeholder")
-            }
-        }
-    }
 }
