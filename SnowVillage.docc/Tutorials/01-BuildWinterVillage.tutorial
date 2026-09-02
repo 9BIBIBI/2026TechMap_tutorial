@@ -22,7 +22,7 @@
             @Step {
                 Project Browser에서 `Import Asset` 아이콘을 눌러 Finder를 엽니다.
 
-                @Image(source: "C1_01.png", alt: "새 Reality Composer Pro 프로젝트 생성 화면 placeholder")
+                @Image(source: "C1_01_1.png", alt: "새 Reality Composer Pro 프로젝트 생성 화면 placeholder")
             }
 
             @Step {
