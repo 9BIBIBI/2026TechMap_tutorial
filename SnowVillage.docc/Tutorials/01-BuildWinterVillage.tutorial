@@ -14,13 +14,9 @@
 
 
         @Steps {
-             @Step {
-            아래 링크에서 겨울 디오라마 제작에 필요한 3D 에셋을 다운로드합니다.
-
-            [3D 에셋 다운로드 (ZIP, 3.77 MB)](https://raw.githubusercontent.com/9BIBIBI/2026TechMap_tutorial/main/downloads.zip)
-
-            다운로드가 완료되면 `downloads.zip` 파일을 더블 클릭하여 압축을 해제합니다.
-        }
+            @Step {
+    아래 링크에서 겨울 디오라마 제작에 필요한 3D 에셋을 다운로드합니다: [3D 에셋 다운로드 (ZIP, 3.77 MB)](https://raw.githubusercontent.com/9BIBIBI/2026TechMap_tutorial/main/downloads.zip) 다운로드가 완료되면 `downloads.zip` 파일을 더블 클릭하여 압축을 해제합니다.
+}
 
             
             @Step {
