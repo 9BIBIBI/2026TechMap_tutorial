@@ -14,7 +14,7 @@
 
         @Steps {
             @Step {
-                왼쪽 화면의 Hierarchy에서 Snowman을 선택합니다. Inspector 아래의 Add Component를 누르고 Animation Library Component를 추가합니다.
+                왼쪽 화면의 오브젝트 목록에서 Snowman을 선택합니다. 오른쪽 속성 창 하단의 Add Component를 누르고 Animation Library Component를 추가합니다.
 
                 @Image(source: "C2_01.png", alt: "Snowman에 Animation Library Component를 추가하는 화면 placeholder")
             }
@@ -39,7 +39,7 @@
 
 
             @Step {
-                Workspace 상단의 재생(▶) 버튼을 눌러 Snowman 애니메이션이 재생되는지 확인합니다.
+                Viewport 상단의 재생(▶) 버튼을 눌러 Snowman 애니메이션이 재생되는지 확인합니다.
 
                 @Image(source: "C2_06.png", alt: "Auto Play를 켜고 Snowman 애니메이션을 재생하는 화면 placeholder")
             }
@@ -56,19 +56,19 @@
 
         @Steps {
             @Step {
-               아무것도 선택하지 않은 상태에서 왼쪽 Hierarchy 창 하단의 + 버튼을 누릅니다. Add Child Entity > Empty를 선택하여 빈 Entity를 생성하고 이름을 `SnowEmitter`로 변경합니다.
+               아무것도 선택하지 않은 상태에서 왼쪽 오브젝트 목록 창 하단의 + 버튼을 누릅니다. Add Child Entity > Empty를 선택하여 빈 Entity를 생성하고 이름을 `SnowEmitter`로 변경합니다.
 
                 @Image(source: "C2_07.png", alt: "SnowEmitter라는 이름의 빈 Entity를 생성한 화면 placeholder")
             }
 
             @Step {
-                `SnowEmitter`를 선택하고 Space 키를 누르거나 오른쪽 Inspector 창의 Add Component를 선택합니다. 검색창에서 Particle Emitter를 찾아 Component를 추가합니다. 
+                `SnowEmitter`를 선택하고 Space 키를 누르거나 오른쪽 속성 창의 Add Component를 선택합니다. 검색창에서 Particle Emitter를 찾아 Component를 추가합니다. 
 
                 @Image(source: "C2_09.png", alt: "Particle Emitter에 Snow 프리셋을 적용하는 화면 placeholder")
             }
 
             @Step {
-                오른쪽 Inspector의 Particle Emitter에서 Presets를 눌러 `Snow`를 선택하고, Workspace 상단의 재생(▶) 버튼을 눌러 눈 파티클을 재생합니다.
+                오른쪽 속성 창의 Particle Emitter에서 Presets를 눌러 `Snow`를 선택하고, Viewport 상단의 재생(▶) 버튼을 눌러 눈 파티클을 재생합니다.
 
 
                 @Image(source: "C2_10.png", alt: "SnowEmitter의 위치와 방출 범위를 조절하는 화면 placeholder")
