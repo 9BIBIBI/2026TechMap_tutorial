@@ -12,9 +12,21 @@
             @Image(source: "C1_01.png", alt: "필요한 에셋이 모두 표시된 Project Browser placeholder")
         }
 
+
         @Steps {
+             @Step {
+            아래 링크에서 겨울 디오라마 제작에 필요한 3D 에셋을 다운로드합니다.
+
+            [3D 에셋 다운로드 (ZIP, 3.77 MB)](https://raw.githubusercontent.com/9BIBIBI/2026TechMap_tutorial/main/downloads.zip)
+
+            다운로드가 완료되면 `downloads.zip` 파일을 더블 클릭하여 압축을 해제합니다.
+        }
+
+            
             @Step {
                 Reality Composer Pro 3를 실행합니다. Create New를 선택하여 빈 프로젝트를 만듭니다.
+
+                프로젝트가 열리면 화면 중앙의 Viewport에서 3D 장면을 확인할 수 있으며, 화면 왼쪽 목록에서 장면에 추가된 오브젝트를 선택할 수 있습니다.
 
                 @Image(source: "C1_02.png", alt: "Reality Composer Pro 3 Welcome 화면 placeholder")
             }
@@ -48,17 +60,17 @@
 
         @Steps {
             @Step {
-                Project Browser의 Floor 에셋을 Viewport 또는 Hierarchy로 드래그하여 장면에 추가합니다.
+                Project Browser의 Floor 에셋을 Viewport 또는 왼쪽 오브젝트 목록 창으로 드래그하여 장면에 추가합니다.
 
-                Hierarchy에 에셋을 드래그하면 에셋의 Position X, Y, Z 값이 0으로 설정됩니다.
+                목록 창에 에셋을 드래그하면 에셋의 Position X, Y, Z 값이 0으로 설정됩니다.
 
                 @Image(source: "C1_05.png", alt: "Floor 에셋을 장면에 추가하는 화면 placeholder")
             }
 
             @Step {
-                에셋을 Viewport에 드래그하여 추가했다면 Viewport나 Hierarchy에서 Floor를 선택하고 Inspector의 Transform에서 Position X, Y, Z를 각각 `0`으로 입력합니다. Floor가 이후 배치의 기준점이 됩니다.
+                Floor를 선택하고 화면 오른쪽 속성 영역의 Transform에서 Position X, Y, Z를 각각 `0`으로 입력합니다. Floor가 이후 배치의 기준점이 됩니다.
 
-                @Image(source: "C1_06.png", alt: "Floor의 Position X Y Z가 모두 0인 Inspector 화면 placeholder")
+                @Image(source: "C1_06.png", alt: "Floor의 Position X Y Z가 모두 0인 속성 창 화면 placeholder")
             }
 
             @Step {
@@ -72,7 +84,7 @@
             @Step {
                 Project Browser에서 Tree를 Floor 위로 드래그하여 에셋을 추가합니다. Tree가 선택된 상태에서 Gizmo의 화살표를 사용하여 위치를 이동합니다. 
 
-                Gizmo의 X, Z 화살표 사이의 초록색 사각형을 잡고 움직이면 Y 값은 유지한 채 X축과 Z축으로만 이동할 수 있어 에셋을 이동하기에 편리합니다.
+                Gizmo는 Viewport에서 선택한 오브젝트의 위치와 방향을 조절하는 도구입니다. 빨간색은 X축, 초록색은 Y축, 파란색은 Z축을 나타내며, 화살표를 드래그하면 오브젝트를 이동할 수 있습니다.
 
                 @Image(source: "C1_08.png", alt: "Floor 위에 배치한 Igloo placeholder")
             }
@@ -80,7 +92,7 @@
             @Step {
                 그대로 Tree가 선택된 상태에서 `R` 키를 눌러 Scale Gizmo로 전환하고, Scale Gizmo 중앙의 사각형 핸들을 잡고 위아래로 움직여 Tree의 크기를 균일하게 조절합니다.
 
-                정확한 수치로 크기를 조절하고 싶다면 에셋을 선택한 상태에서 우측 Inspector 창의 Transform Component > Scale에서 X, Y, Z 값을 입력합니다. 세 축에 같은 값을 입력하면 에셋의 비율은 유지한 채 크기를 조절할 수 있습니다.
+                정확한 수치로 크기를 조절하고 싶다면 에셋을 선택한 상태에서 우측 속성 창의 Transform Component > Scale에서 X, Y, Z 값을 입력합니다. 세 축에 같은 값을 입력하면 에셋의 비율은 유지한 채 크기를 조절할 수 있습니다.
 
                 @Image(source: "C1_09.png", alt: "Igloo 옆에 Tree 하나를 배치한 화면 placeholder")
             }
@@ -113,14 +125,14 @@
 
         @Steps {
             @Step {
-                아무것도 선택하지 않은 상태에서 왼쪽 Hierarchy 창 하단의 `+` 버튼을 누릅니다. `Add Child Entity > Empty`를 선택하여 빈 Entity를 생성하고 이름을 `DirectionalLight`로 변경합니다.
+                아무것도 선택하지 않은 상태에서 왼쪽 목록 창 하단의 `+` 버튼을 누릅니다. `Add Child Entity > Empty`를 선택하여 빈 Entity를 생성하고 이름을 `DirectionalLight`로 변경합니다.
                 
 
                 @Image(source: "C1_12.png", alt: "Move Gizmo로 Tree의 위치를 조정하는 화면 placeholder")
             }
 
             @Step {
-                `DirectionalLight` Entity를 선택하고 `Space` 키를 누르거나 오른쪽 Inspector 창의 `Add Component`를 선택합니다. 검색창에서 `Directional Light`를 찾아 Component를 추가합니다.
+                `DirectionalLight` Entity를 선택하고 `Space` 키를 누르거나 오른쪽 속성 창의 `Add Component`를 선택합니다. 검색창에서 `Directional Light`를 찾아 Component를 추가합니다.
 
                 @Image(source: "C1_14.png", alt: "Rotate Gizmo로 Tree의 방향을 조정하는 화면 placeholder")
             }
@@ -140,7 +152,7 @@
             }
 
             @Step {
-                `DirectionalLight` Entity를 선택하고 `E` 키를 눌러 Rotate Gizmo로 전환합니다. 회전 링을 드래그하거나 Inspector의 Transform Component에서 Rotation 값을 입력하여 빛의 방향을 조절합니다.
+                `DirectionalLight` Entity를 선택하고 `E` 키를 눌러 Rotate Gizmo로 전환합니다. 회전 링을 드래그하거나 오른쪽 속성 창의 Transform Component에서 Rotation 값을 입력하여 빛의 방향을 조절합니다.
 
                 @Image(source: "C1_17.png", alt: "눈 효과가 없는 기본 겨울 마을 완성 화면 placeholder")
             }
